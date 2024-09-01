@@ -94,6 +94,7 @@ a {
 
 .table-container {
   max-width: 100%;
+  overflow-x: auto;
 }
 
 .hero {
@@ -165,6 +166,14 @@ th {
   -webkit-box-shadow: 0px 4px 6px -1px rgba(50, 52, 56, 0.2);
   -moz-box-shadow: 0px 4px 6px -1px rgba(50, 52, 56, 0.2);
   box-shadow: 0px 4px 6px -1px rgba(50, 52, 56, 0.2);
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
 }
 
 
