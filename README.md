@@ -79,4 +79,4 @@ Implementing real-time filtering across multiple columns required careful consid
 
 This project demonstrates a robust approach to managing and displaying user data with advanced filtering capabilities. The use of Redux Toolkit and TypeScript ensures the application is maintainable and scalable, while the clean design provides a positive user experience.
 
-![preview](https://github.com/Inna-Mykytiuk/..../blob/main/assets/111.jpg)
+![preview](https://github.com/Inna-Mykytiuk/management-test/blob/main/public/111.jpg)
