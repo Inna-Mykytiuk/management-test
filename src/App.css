@@ -1,29 +1,144 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App {
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+
+  min-height: 100vh;
+  max-width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+body::-webkit-scrollbar {
+  appearance: none;
+  background: #00466e1a;
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 5px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+.container {
+  max-width: 100%;
+  width: 600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+
+.section {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.table-container {
+  max-width: 100%;
+}
+
+.hero {
+  display: none;
+  max-width: 50%;
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  font-family: "Dancing Script", cursive;
   text-align: center;
-  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-phone {
+  font-size: 12px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  box-shadow: -1px 15px 44px -19px rgba(50, 52, 56, 0.5);
 }
 
 th,
 td {
-  border: 1px solid #ddd;
+  border: 1px solid #a8aec7;
   padding: 8px;
 }
 
 th {
-  background-color: #f4f4f4;
+  background-color: #868ba0;
+}
+
+.table-header {
+  font-family: "Dancing Script", cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
 }
 
 .search-input {
@@ -31,4 +146,52 @@ th {
   width: 100%;
   margin-bottom: 20px;
   box-sizing: border-box;
+  border: 1px solid #bbc8d8;
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+  background: white;
+
+  -webkit-box-shadow: 0px 4px 6px -1px rgba(50, 52, 56, 0.2);
+  -moz-box-shadow: 0px 4px 6px -1px rgba(50, 52, 56, 0.2);
+  box-shadow: 0px 4px 6px -1px rgba(50, 52, 56, 0.2);
+
+}
+
+.search-input:focus {
+  border-color: red;
+}
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .table-container {
+    padding-left: 40px;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1440) {
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+  }
 }
