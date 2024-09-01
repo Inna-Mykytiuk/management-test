@@ -1,3 +1,10 @@
+:root {
+  --shadow: -1px 15px 44px -19px rgba(50, 52, 56, 0.5);
+  --border: #a8aec7;
+  --background: #868ba0;
+}
+
+
 *,
 *::before,
 *::after {
@@ -121,17 +128,17 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  box-shadow: -1px 15px 44px -19px rgba(50, 52, 56, 0.5);
+  box-shadow: var(--shadow);
 }
 
 th,
 td {
-  border: 1px solid #a8aec7;
+  border: 1px solid var(--border);
   padding: 8px;
 }
 
 th {
-  background-color: #868ba0;
+  background-color: var(--background);
 }
 
 .table-header {
@@ -146,7 +153,7 @@ th {
   width: 100%;
   margin-bottom: 20px;
   box-sizing: border-box;
-  border: 1px solid #bbc8d8;
+  border: 1px solid var(--border);
   outline: none;
   border-radius: 4px;
   font-size: 16px;
