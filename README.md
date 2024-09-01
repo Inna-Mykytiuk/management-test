@@ -1,50 +1,82 @@
-# React + TypeScript + Vite
+# User Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a responsive web application that fetches user data from the JSONPlaceholder API, displays it in a tabular format, and provides advanced filtering capabilities. It is built with React, Redux, and TypeScript to ensure a robust and maintainable codebase.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Application Structure](#application-structure)
+  - [Data Fetching](#data-fetching)
+  - [User Table](#user-table)
+  - [Advanced Filtering](#advanced-filtering)
+  - [State Management](#state-management)
+  - [Type Safety](#type-safety)
+  - [Design and Styling](#design-and-styling)
+- [Challenges Faced](#challenges-faced)
+- [Conclusion](#conclusion)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Fetch All Users**: Retrieves a list of users from the JSONPlaceholder API using a GET request.
+- **Display Users in a Table**: Users are displayed in a dynamic table with columns for name, username, email, and phone.
+- **Advanced Filtering**: Search input fields for each column allow for real-time filtering of user data.
+- **State Management**: Managed using Redux Toolkit for efficient handling of user data and filter states.
+- **Type Safety**: TypeScript is applied throughout the project to reduce runtime errors and ensure robust typing.
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React**: For building the user interface.
+- **Redux Toolkit**: To manage application state.
+- **TypeScript**: For type safety and improved code quality.
+- **Axios**: For handling API requests to JSONPlaceholder.
+- **CSS**: For styling the application with a focus on a clean and user-friendly interface.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Getting Started
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+To get the project running on your local machine:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Getting Started
+
+To view the website locally:
+
+1. Clone the repository: git clone https://github.com/Inna-Mykytiuk/management-test
+2. Navigate into the project directory.
+3. Open `index.html` in your web browser.
+
+## Application Structure
+
+### Data Fetching
+
+Data is fetched from the JSONPlaceholder API using Axios. The user data is then stored in the Redux store for easy access and management across the application.
+
+### User Table
+
+The user table displays four columns: name, username, email, and phone. The table is dynamic, rendering data from the Redux store.
+
+### Advanced Filtering
+
+Search input fields are implemented for each column in the user table. As users type in the search fields, the table dynamically filters the results, providing real-time updates.
+
+### State Management
+
+Redux Toolkit is used for managing the application state. The user data and filter states are stored in the Redux store, ensuring consistent and centralized state management.
+
+### Type Safety
+
+TypeScript is utilized throughout the application, providing type definitions for API data, Redux states, and component props. This reduces potential runtime errors and enhances code maintainability.
+
+### Design and Styling
+
+The application is styled using CSS, focusing on a clean and responsive design. The user table and search inputs are designed to be intuitive and easy to use.
+
+### Challenges Faced
+
+Implementing real-time filtering across multiple columns required careful consideration of performance, especially with large datasets. Ensuring type safety across complex data structures also presented challenges, which were addressed with thorough TypeScript integration.
+
+### Conclusion
+
+This project demonstrates a robust approach to managing and displaying user data with advanced filtering capabilities. The use of Redux Toolkit and TypeScript ensures the application is maintainable and scalable, while the clean design provides a positive user experience.
+
+![preview](https://github.com/Inna-Mykytiuk/..../blob/main/assets/111.jpg)
